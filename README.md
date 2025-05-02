@@ -3,7 +3,7 @@ This assignment aims to deploy a custom NGINX Web App to a local Kubernetes clus
 
 ### ✨ Prerequisites:
 1. Install [Docker](https://docs.docker.com/get-docker/)
-2. Install [act](https://github.com/nektos/act#installation) >> to allow to run GitHub Actions locally which is perfect for the assignment requirment
+2. Install [act](https://github.com/nektos/act#installation) >> will allow us to run GitHub Actions locally which is perfect for the assignment requirment
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
@@ -59,7 +59,7 @@ Adopting the GitFlow branching model enhances CI/CD and environment isolation:
 
     main branch → for deploying to the production environment
 
-    
+
 
 ❌ Important:
 #### If you faced this Error while running act "Error: cannot re-use a name that is still in use"
@@ -71,9 +71,17 @@ helm list -n dev
 ```bash
 helm uninstall nginx-local -n dev
 ```
+#### If you face this error while working with k8s "Error: Kubernetes cluster unreachable: Get "http://localhost:8080/version": dial tcp 127.0.0.1:8080: connect: connection refused"
+#### you would need to run these commands
+```bash
+k3d kubeconfig write sonnen-k3d-cluster
+export KUBECONFIG=$(k3d kubeconfig write sonnen-k3d-cluster)
+kubectl config get-contexts
+kubectl config use-context k3d-sonnen-k3d-cluster
+```
 
-#### 📩 Notes:
- **Need help?**  
+#### ⭕ Notes:
+📩 **Facing Issues?**  
 If you encounter any issues validating my solution or faced access restrictions, please feel free to contact me at **mohammedfeshar@gmail.com**.
 
 
