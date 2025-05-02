@@ -11,12 +11,22 @@ install kubectl
 1️⃣ clone the repo
 ```bash
 $ git clone https://github.com/Mohammed-Feshar/sonnen-nginx-deployment-task
+```
 2️⃣ goto script directory
+```bash
 $ cd script/
+```
 3️⃣ make file executable
+```bash
 $ chmod +x run.sh
-4️⃣ run the script
+```
+```bash
+4️⃣ export DOCKER_PASSWORD="docker_password"
+```
+5️⃣ run the script
+```bash
 $ ./run.sh
+```
 
 
 ❌ Important:
