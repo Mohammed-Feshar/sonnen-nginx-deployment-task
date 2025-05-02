@@ -1,7 +1,7 @@
 #  🔥 Sonnen nginx deployment task 🔥
 Task project to deploy a custom NGINX Web App to Kubernetes using Helm
 
-### ✨ Prerequisite:
+### ✨ Prerequisites:
 install docker
 install act
 install k3d
@@ -20,8 +20,9 @@ $ cd script/
 ```bash
 $ chmod +x run.sh
 ```
+4️⃣ set docker access token that was shared via email
 ```bash
-4️⃣ export DOCKER_PASSWORD="docker_password"
+$ export DOCKER_PASSWORD="docker_password"
 ```
 5️⃣ run the script
 ```bash
