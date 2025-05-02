@@ -1,12 +1,21 @@
 #  🔥 Sonnen nginx deployment task 🔥
 Task project to deploy a custom NGINX Web App to Kubernetes using Helm
 
-✨ Prerequisite:
+### ✨ Prerequisite:
 install docker
 install act
 install k3d
 install kubectl
 
+### ✨ Steps:
+1️⃣ clone the repo
+$ git clone https://github.com/Mohammed-Feshar/sonnen-nginx-deployment-task
+2️⃣ goto script directory
+$ cd script/
+3️⃣ make file executable
+$ chmod +x run.sh
+4️⃣ run the script
+$ ./run.sh
 
 
 ❌ Important:
