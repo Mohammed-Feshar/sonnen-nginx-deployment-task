@@ -1,5 +1,5 @@
 #  🔥 Sonnen nginx deployment task 🔥
-This assignment aims to deploy a custom NGINX Web App to Kubernetes using Helm
+This assignment aims to deploy a custom NGINX Web App to a local Kubernetes cluster using Helm by Terraform
 
 ### ✨ Prerequisites:
 1. Install [Docker](https://docs.docker.com/get-docker/)
@@ -43,8 +43,16 @@ I picked k3d because it's a lightweight wrapper around k3s that allows spinning 
 #### If you faced this Error while running act "Error: cannot re-use a name that is still in use"
 #### You need to unistall the helm release then run again
 Example: 
-$ helm list -n dev
-$ helm uninstall nginx-local -n dev
+```bash
+helm list -n dev
+```
+```bash
+helm uninstall nginx-local -n dev
+```
+
+#### 📩 Notes:
+ **Need help?**  
+If you encounter any issues validating my solution or faced access restrictions, please feel free to contact me at **mohammedfeshar@gmail.com**.
 
 
 
