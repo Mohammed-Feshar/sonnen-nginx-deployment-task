@@ -3,7 +3,13 @@ This assignment aims to deploy a custom NGINX Web App to Kubernetes using Helm
 
 ### ✨ Prerequisites:
 1. Install [Docker](https://docs.docker.com/get-docker/)
-2. Install [act](https://github.com/nektos/act#installation)
+2. Install [act](https://github.com/nektos/act#installation) >> to allow to run GitHub Actions locally which is perfect for the assignment requirment
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+brew install act
+```
 3. Install [k3d](https://k3d.io/#installation)
 4. Install [kubectl](https://kubernetes.io/docs/tasks/tools/)
 
