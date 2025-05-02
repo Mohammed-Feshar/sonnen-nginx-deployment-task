@@ -9,6 +9,7 @@ install kubectl
 
 ### ✨ Steps:
 1️⃣ clone the repo
+```bash
 $ git clone https://github.com/Mohammed-Feshar/sonnen-nginx-deployment-task
 2️⃣ goto script directory
 $ cd script/
