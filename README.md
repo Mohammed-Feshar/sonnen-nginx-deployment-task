@@ -13,7 +13,7 @@ brew install act
 3. Install [k3d](https://k3d.io/#installation)
 4. Install [kubectl](https://kubernetes.io/docs/tasks/tools/)
 
-### ✨ Steps:
+### ✨ Steps to test the application:
 1️⃣ clone the repo
 ```bash
 git clone https://github.com/Mohammed-Feshar/sonnen-nginx-deployment-task
@@ -38,6 +38,28 @@ export DOCKER_PASSWORD="docker_password"
 ### ✨ Why using K3D on local machines:
 I picked k3d because it's a lightweight wrapper around k3s that allows spinning up a local Kubernetes cluster in seconds.and by default it creates a single node cluster where the control plane and worker are combined togther, and it's great for machines with limited resources like laptops, also it's ideal for local development or testing environments
 
+
+### ✨ Improvments:
+#### Environment Configuration:
+To better manage multiple environments (dev, sit, uat, prod), we can create a config/ directory inside the terraform/ folder. Each environment will have its own terraform.tfvars file:
+```bash
+terraform/config/dev/terraform.tfvars
+terraform/config/sit/terraform.tfvars
+...
+```
+During deployment, the appropriate file can be used dynamically in GitHub Actions based on the target environment
+for example
+```bash
+terraform apply -auto-approve -var-file=../config/${environment}/terraform.tfvars
+```
+#### Git Branching Strategy
+Adopting the GitFlow branching model enhances CI/CD and environment isolation:
+
+    dev branch → for deploying to development and SIT environments
+
+    main branch → for deploying to the production environment
+
+    
 
 ❌ Important:
 #### If you faced this Error while running act "Error: cannot re-use a name that is still in use"
