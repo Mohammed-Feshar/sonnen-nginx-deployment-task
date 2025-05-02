@@ -21,3 +21,4 @@ kubectl get po -n dev
 
 # Port-forward the nginx deployment on port 8070 on the local machine
 kubectl port-forward -n dev deployment/nginx-local-sonnen-nginx 8070:80
+
