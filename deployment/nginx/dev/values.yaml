@@ -5,10 +5,11 @@
 replicaCount: 1
 
 image:
-  repository: feshar92/sonnen-task
+  repository: feshar92/sonnen-dev-task
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ${{ github.sha }}
+  tag: 4414f4abeb85f171dbd2895fb30422786f6e6fa4
+  #tag: ${{ github.sha }}
   # secrets:
   #   - name: secret-key
 
@@ -44,7 +45,7 @@ securityContext: {}
 #ClusterIP
 service:
   type: ClusterIP
-  port: 8000
+  port: 80
 
 ingress:
   enabled: False
