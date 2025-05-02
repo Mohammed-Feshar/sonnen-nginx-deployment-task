@@ -29,6 +29,9 @@ export DOCKER_PASSWORD="docker_password"
 ./run.sh
 ```
 
+### ✨ Why using K3D on local machines:
+I picked k3d because it's a lightweight wrapper around k3s that allows spinning up a local Kubernetes cluster in seconds.and by default it creates a single node cluster where the control plane and worker are combined togther, and it's great for machines with limited resources like laptops, also it's ideal for local development or testing environments
+
 
 ❌ Important:
 #### If you faced this Error while running act "Error: cannot re-use a name that is still in use"
