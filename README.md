@@ -34,7 +34,18 @@ export DOCKER_PASSWORD="docker_password"
 ```bash
 ./run.sh
 ```
-
+6️⃣ after running the script you will see an output similar to this
+```bash
+Dev Deployment/DEPLOY IMAGE]   ✅  Success - Complete job
+[Dev Deployment/DEPLOY IMAGE] 🏁  Job succeeded
+Forwarding from 127.0.0.1:8070 -> 80
+Forwarding from [::1]:8070 -> 80
+Handling connection for 8070
+```
+7️⃣ go to your favorite browser and check localhost on port 8070 and that's it
+```bash
+http://localhost:8070/
+```
 ### ✨ Why using K3D on local machines:
 I picked k3d because it's a lightweight wrapper around k3s that allows spinning up a local Kubernetes cluster in seconds.and by default it creates a single node cluster where the control plane and worker are combined togther, and it's great for machines with limited resources like laptops, also it's ideal for local development or testing environments
 
@@ -59,7 +70,8 @@ Adopting the GitFlow branching model enhances CI/CD and environment isolation:
 
     main branch → for deploying to the production environment
 
-
+#### Security Improvements
+We can enhance security by integrating SAST and DAST tools into the CI/CD pipeline like (SonarQube,Checkov, Trivy, Clair,Burp Suite, etc..)
 
 ❌ Important:
 #### If you faced this Error while running act "Error: cannot re-use a name that is still in use"
