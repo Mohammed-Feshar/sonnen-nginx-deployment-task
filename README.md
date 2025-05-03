@@ -2,6 +2,7 @@
 This repo aims to deploy a custom NGINX Web App to a local Kubernetes cluster using Helm by Terraform in a fully automated approach as requested in the assignment requirments
 
 ### ✨ Prerequisites:
+on your local machine
 1. Install [Docker](https://docs.docker.com/get-docker/)
 2. Install [act](https://github.com/nektos/act#installation) >> will allow us to run GitHub Actions locally which is perfect for the assignment requirment
 ```bash
