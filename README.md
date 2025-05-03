@@ -12,8 +12,9 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew install act
 ```
 3. Install [k3d](https://k3d.io/#installation)
-4. Install [kubectl](https://kubernetes.io/docs/tasks/tools/)
+4. Install [Helm](https://helm.sh/docs/intro/install/) 
 5. Install [Terraform](https://developer.hashicorp.com/terraform/downloads) >> required for deploying the Helm chart as requested
+6. Install [kubectl](https://kubernetes.io/docs/tasks/tools/)
 
 ### ✨ Steps to test the application:**
 1️⃣ clone the repo
