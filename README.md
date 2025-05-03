@@ -48,7 +48,7 @@ Handling connection for 8070
 http://localhost:8070/
 ```
 ### ✨ How to deploy the Helm chart:
-I have created a custom Helm chart that pulls the Docker image from Docker Hub and deploys it using the Helm provider in Terraform on local k3d cluster with one replica
+I have created a custom Helm chart that pulls the Docker image from Docker Hub and deploys it using the Helm provider in Terraform on local k3d cluster with one replica and this deployment is automated in the github workflow file in the deploy stage
 
 
 ### ✨ Why using K3D on local machines:
