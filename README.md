@@ -1,5 +1,5 @@
 #  🔥 Sonnen nginx deployment task 🔥
-This assignment aims to deploy a custom NGINX Web App to a local Kubernetes cluster using Helm by Terraform
+This repo aims to deploy a custom NGINX Web App to a local Kubernetes cluster using Helm by Terraform in a fully automated approach as requested in the assignment requirments
 
 ### ✨ Prerequisites:
 1. Install [Docker](https://docs.docker.com/get-docker/)
@@ -12,8 +12,9 @@ brew install act
 ```
 3. Install [k3d](https://k3d.io/#installation)
 4. Install [kubectl](https://kubernetes.io/docs/tasks/tools/)
+5. Install [Terraform](https://developer.hashicorp.com/terraform/downloads) >> required for deploying the Helm chart as requested
 
-### ✨ Steps to test the application:
+### ✨ Steps to test the application:**
 1️⃣ clone the repo
 ```bash
 git clone https://github.com/Mohammed-Feshar/sonnen-nginx-deployment-task
@@ -46,6 +47,10 @@ Handling connection for 8070
 ```bash
 http://localhost:8070/
 ```
+### ✨ How to deploy the Helm chart:
+I have created a custom Helm chart that pulls the Docker image from Docker Hub and deploys it using the Helm provider in Terraform on local k3d cluster with one replica
+
+
 ### ✨ Why using K3D on local machines:
 I picked k3d because it's a lightweight wrapper around k3s that allows spinning up a local Kubernetes cluster in seconds.and by default it creates a single node cluster where the control plane and worker are combined togther, and it's great for machines with limited resources like laptops, also it's ideal for local development or testing environments
 
@@ -83,7 +88,7 @@ helm list -n dev
 ```bash
 helm uninstall nginx-local -n dev
 ```
-#### If you face this error while working with k8s "Error: Kubernetes cluster unreachable: Get "http://localhost:8080/version": dial tcp 127.0.0.1:8080: connect: connection refused"
+#### If you faced this error while working with k8s "Error: Kubernetes cluster unreachable: Get "http://localhost:8080/version": dial tcp 127.0.0.1:8080: connect: connection refused"
 #### you would need to run these commands
 ```bash
 k3d kubeconfig write sonnen-k3d-cluster
@@ -93,8 +98,8 @@ kubectl config use-context k3d-sonnen-k3d-cluster
 ```
 
 #### ⭕ Notes:
+### 💢 I have added custom CSS and JavaScript files alongside the index.html page to make the web application more user-friendly
+### 💢 I haved added a screenshot named sonnen-final-result.png in the root directory which display the final output
 📩 **Facing Issues?**  
 If you encounter any issues validating my solution or faced access restrictions, please feel free to contact me at **mohammedfeshar@gmail.com**.
-
-
 
