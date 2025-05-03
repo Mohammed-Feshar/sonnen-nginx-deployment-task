@@ -35,7 +35,7 @@ export DOCKER_PASSWORD="docker_password"
 ```bash
 ./run.sh
 ```
-6️⃣ after running the script you will see an output similar to this
+6️⃣ after running the script you will see an output similar to this on your local terminal
 ```bash
 Dev Deployment/DEPLOY IMAGE]   ✅  Success - Complete job
 [Dev Deployment/DEPLOY IMAGE] 🏁  Job succeeded
